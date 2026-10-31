@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+int n, m, i, j, count = 0;
+scanf("%d", &n);
+int g[n];
+for (i = 0; i < n; i++) {
+scanf("%d", &g[i]);
+}
+scanf("%d", &m);
+int s[m];
+for (i = 0; i < m; i++) {
+scanf("%d", &s[i]);
+}
+// Sort children greed factors
+for (i = 0; i < n - 1; i++) {
+for (j = i + 1; j < n; j++) {
+if (g[i] > g[j]) {
+int temp = g[i];
+g[i] = g[j];
+g[j] = temp;
+}
+}
+}
+// Sort cookie sizes
+for (i = 0; i < m - 1; i++) {
+for (j = i + 1; j < m; j++) {
+if (s[i] > s[j]) {
+int temp = s[i];
+s[i] = s[j];
+s[j] = temp;
+}
+}
+}
+i = 0;
+j = 0;
+// Give smallest suitable cookie to each child
+while (i < n && j < m) {
+if (s[j] >= g[i]) {
+count++;
+i++;
+j++;
+} else {
+j++;
+}
+}
+printf("%d", count);
+return 0;
+}
