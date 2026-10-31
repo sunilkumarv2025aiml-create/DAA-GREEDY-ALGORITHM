@@ -53,5 +53,17 @@ gcc "2-G-Burger Problem" -o burger
 
 ---
 
+## 📱 Quick Access (QR Code)
+
+Scan the QR code below to access this repository directly on your mobile device:
+
+<div align="center">
+  <img src="./repo-qr.png" alt="Repository QR Code" width="180"/>
+  <br/>
+  <sub><b>https://github.com/Sanjay-AI-ML/DAA-GREEDY-ALGORITHM</b></sub>
+</div>
+
+---
+
 ## 👤 Author
 - **Sanjay R** ([@Sanjay-AI-ML](https://github.com/Sanjay-AI-ML))
